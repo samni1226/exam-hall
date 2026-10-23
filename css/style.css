@@ -1,0 +1,177 @@
+:root {
+  --primary: #2f5cff;
+  --primary-dark: #1e3fc2;
+  --bg: #f4f6fb;
+  --card-bg: #ffffff;
+  --text-dark: #1c2333;
+  --text-muted: #6b7280;
+  --border: #e5e8f0;
+  --success: #1aa262;
+  --danger: #e34747;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text-dark);
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* ---------- Auth pages ---------- */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary) 0%, #7b8fff 100%);
+  padding: 20px;
+}
+
+.auth-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 45px rgba(30, 40, 90, 0.25);
+}
+
+.auth-card h2 {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.auth-card p.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* ---------- Top navbar ---------- */
+.navbar-app {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+}
+
+.navbar-app .brand {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 18px;
+}
+
+/* ---------- Sidebar layout ---------- */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  background: #171c30;
+  color: #cfd5ec;
+  flex-shrink: 0;
+  padding: 20px 0;
+}
+
+.sidebar .brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0 20px 20px 20px;
+  display: block;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: #cfd5ec;
+  text-decoration: none;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background: rgba(47, 92, 255, 0.18);
+  color: #fff;
+  border-left-color: var(--primary);
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 26px 32px;
+}
+
+.page-title {
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+/* ---------- Cards / stats ---------- */
+.stat-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  height: 100%;
+}
+
+.stat-card .stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-card .stat-label {
+  color: var(--text-muted);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.panel {
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.table thead th {
+  background: #f0f2fa;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  color: var(--text-muted);
+  border-bottom: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.badge-dept {
+  background: #eef1ff;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  .sidebar { display: none !important; }
+  .main-content { padding: 0; }
+}
+
+@media (max-width: 768px) {
+  .app-layout { flex-direction: column; }
+  .sidebar { width: 100%; }
+}
